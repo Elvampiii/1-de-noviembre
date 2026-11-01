@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#28152f">
+  <meta name="description" content="Un universo lleno de cartas, música y cariño para Ferchis.">
+  <title>Mi universo bonito | Para Ferchis 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div id="particles" class="particles" aria-hidden="true"></div>
+
+  <div class="intro" id="intro">
+    <div class="intro-card">
+      <div class="intro-flower">🌷</div>
+      <p class="eyebrow">UN PEQUEÑO UNIVERSO PARA TI</p>
+      <h1>Hola, mi niña hermosa</h1>
+      <p>Preparé este rinconcito pensando en ti, en tu sonrisa y en lo bonito que es tenerte en mi vida.</p>
+      <button class="button button-primary" id="openUniverse">Entrar a mi universo <span>♡</span></button>
+      <small>Hecho con muchísimo cariño para Ferchis</small>
+    </div>
+  </div>
+
+  <header class="hero" id="inicio">
+    <nav class="nav">
+      <a class="brand" href="#inicio">♡ nuestro universo</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#musica">Nuestra música</a><a href="#cartas">Cartitas</a><a href="#historia">Nuestra historia</a><a href="#promesas">Promesas</a><a href="#sorpresas">Sorpresas</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <span class="hero-kicker">PARA LA PERSONITA MÁS BONITA</span>
+      <h1>Mi niña hermosa,<br><em>mi Ferchis preciosa.</em></h1>
+      <p class="hero-copy">Si pudiera guardar en un lugar todo el cariño que te tengo, seguramente se convertiría en un universo entero. Así que hice uno pequeñito para ti. ✨</p>
+      <a class="button button-primary" href="#musica">Comenzar esta sorpresita <span>↓</span></a>
+      <div class="hero-signature">Con cariño, para mi lechuzina 🦉</div>
+    </div>
+    <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+    <span class="decor decor-heart">♡</span><span class="decor decor-star">✦</span><span class="decor decor-flower">✿</span>
+  </header>
+
+  <main>
+    <!-- MÚSICA PRIMERO: el reproductor aparece antes de las cartas -->
+    <section class="section music-section" id="musica">
+      <div class="section-heading">
+        <p class="eyebrow">PONLE SONIDO A ESTE MOMENTITO</p>
+        <h2>Primero, nuestra <em>musiquita</em> 🎶</h2>
+        <p>Elige las canciones que quieras escuchar mientras recorres este pequeño universo. Puedes cargar varias desde tu dispositivo.</p>
+      </div>
+      <div class="music-panel glass-card">
+        <div class="record-wrap"><div class="record" id="record"><div class="record-center">♡</div></div><span class="record-spark">✦</span></div>
+        <div class="music-controls">
+          <div class="now-playing-label">SONANDO EN NUESTRO UNIVERSO</div>
+          <h3 id="songTitle">Una canción para acompañarte</h3>
+          <p id="songArtist">Selecciona tus canciones favoritas 💗</p>
+          <audio id="audioPlayer" controls preload="metadata"></audio>
+          <div class="track-buttons">
+            <button class="icon-button" id="previousSong" aria-label="Canción anterior">⏮</button>
+            <button class="icon-button play-button" id="playPause" aria-label="Reproducir o pausar">▶</button>
+            <button class="icon-button" id="nextSong" aria-label="Siguiente canción">⏭</button>
+          </div>
+          <div class="music-upload"><label for="musicFiles" class="button button-secondary">＋ Agregar canciones</label><input id="musicFiles" type="file" accept="audio/*" multiple><span id="playlistCount">Aún no has agregado canciones</span></div>
+          <ol class="playlist" id="playlist"><li class="empty-playlist">Tu lista aparecerá aquí cuando agregues música.</li></ol>
+          <p class="tiny-note">La música se reproduce desde los archivos que selecciones en tu dispositivo; no se incluyen canciones protegidas por derechos de autor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="welcome-strip">
+      <span>🌷</span><p>Respira, ponte cómoda y recuerda algo: <strong>esta página no tiene que ser perfecta, porque está hecha para alguien que ya es muy especial.</strong></p><span>🌷</span>
+    </section>
+
+    <section class="section letters-section" id="cartas">
+      <div class="section-heading">
+        <p class="eyebrow">PALABRAS QUE QUIERO QUE GUARDES</p>
+        <h2>Un montón de <em>cartitas para ti</em> 💌</h2>
+        <p>Cada sobre guarda un pedacito de todo lo que quisiera decirte. Toca cada uno para abrirlo.</p>
+      </div>
+      <div class="letter-grid">
+        <article class="envelope-card"><button class="envelope" data-letter="letter1" aria-label="Abrir carta: Para mi niña hermosa"><span class="envelope-stamp">♡</span><span class="envelope-icon">💌</span><strong>Para mi niña hermosa</strong><small>Una carta desde el corazón</small><span class="open-hint">Toca para abrir ✨</span></button></article>
+        <article class="envelope-card"><button class="envelope envelope-lilac" data-letter="letter2" aria-label="Abrir carta: Cuando tengas un día difícil"><span class="envelope-stamp">✿</span><span class="envelope-icon">🌷</span><strong>Cuando tengas un día difícil</strong><small>Un abrazo convertido en palabras</small><span class="open-hint">Toca para abrir ✨</span></button></article>
+        <article class="envelope-card"><button class="envelope envelope-peach" data-letter="letter3" aria-label="Abrir carta: Todo lo que admiro de ti"><span class="envelope-stamp">✦</span><span class="envelope-icon">💗</span><strong>Todo lo que admiro de ti</strong><small>Para que nunca lo olvides</small><span class="open-hint">Toca para abrir ✨</span></button></article>
+        <article class="envelope-card"><button class="envelope envelope-blue" data-letter="letter4" aria-label="Abrir carta: Mi lugar favorito"><span class="envelope-stamp">♡</span><span class="envelope-icon">🦋</span><strong>Mi lugar favorito</strong><small>Sobre los momentos contigo</small><span class="open-hint">Toca para abrir ✨</span></button></article>
+        <article class="envelope-card"><button class="envelope envelope-gold" data-letter="letter5" aria-label="Abrir carta: Un futuro lleno de recuerdos"><span class="envelope-stamp">★</span><span class="envelope-icon">✨</span><strong>Un futuro lleno de recuerdos</strong><small>Todo lo bonito que nos espera</small><span class="open-hint">Toca para abrir ✨</span></button></article>
+        <article class="envelope-card"><button class="envelope envelope-rose" data-letter="letter6" aria-label="Abrir carta: Por si alguna vez lo dudas"><span class="envelope-stamp">♥</span><span class="envelope-icon">🌹</span><strong>Por si alguna vez lo dudas</strong><small>Un recordatorio para tu corazón</small><span class="open-hint">Toca para abrir ✨</span></button></article>
+      </div>
+    </section>
+
+    <section class="section date-section" id="historia">
+      <div class="section-heading"><p class="eyebrow">EL DÍA QUE COMENZÓ ESTA PARTE DE LA HISTORIA</p><h2>Un día que guardo con <em>mucho cariño</em></h2><p>Desde el 7 de septiembre de 2026, una fecha que tiene un lugarcito especial en nuestra historia.</p></div>
+      <div class="date-card glass-card"><div class="date-number">07</div><div><span class="date-month">SEPTIEMBRE</span><strong>2026</strong><p>Un comienzo que merece muchos capítulos bonitos.</p></div><div class="date-flower">🌸</div></div>
+      <div class="counter-wrap"><p class="eyebrow">EL TIEMPO DE NUESTRA HISTORIA</p><div class="counter" aria-live="polite"><div><strong id="days">0</strong><span>días</span></div><div><strong id="hours">0</strong><span>horas</span></div><div><strong id="minutes">0</strong><span>minutos</span></div><div><strong id="seconds">0</strong><span>segundos</span></div></div><p class="counter-caption" id="counterCaption">Cada día suma una página más. ♡</p></div>
+    </section>
+
+    <section class="section reasons-section">
+      <div class="section-heading"><p class="eyebrow">PODRÍA HACER UNA LISTA INFINITA</p><h2>Pequeñas razones por las que eres <em>tan especial</em></h2><p>No son todas, porque hay cosas bonitas de ti que ni siquiera cabrían en una página.</p></div>
+      <div class="reason-grid">
+        <div class="reason-card"><span>🌷</span><h3>Tu forma de ser</h3><p>Porque tienes una manera muy tuya de hacer que las cosas sean especiales.</p></div>
+        <div class="reason-card"><span>☀️</span><h3>Tu luz</h3><p>Porque incluso en días normales puedes convertir un ratito en un recuerdo bonito.</p></div>
+        <div class="reason-card"><span>🦋</span><h3>Tu esencia</h3><p>Porque no tienes que parecerte a nadie. Lo bonito está en que seas tú.</p></div>
+        <div class="reason-card"><span>🌻</span><h3>Tu valentía</h3><p>Admiro que sigas intentando, aprendiendo y avanzando a tu propio ritmo.</p></div>
+        <div class="reason-card"><span>💬</span><h3>Nuestras pláticas</h3><p>Porque hasta una conversación sencilla puede convertirse en mi parte favorita del día.</p></div>
+        <div class="reason-card"><span>💗</span><h3>Simplemente tú</h3><p>Porque no necesito una lista para saber que eres alguien muy importante.</p></div>
+      </div>
+    </section>
+
+    <section class="promise-section" id="promesas"><div class="section promise-inner"><div class="section-heading"><p class="eyebrow">COSITAS QUE QUIERO CUIDAR</p><h2>Mis promesitas para <em>nosotros</em> 🤍</h2><p>No prometo que todos los días serán perfectos. Prometo intentar que lo que construyamos tenga respeto, cariño y sinceridad.</p></div><div class="promise-list"><div><span>01</span><p>Escucharte con atención y tomar en serio lo que sientes.</p></div><div><span>02</span><p>Hablar contigo con honestidad, incluso cuando un tema sea difícil.</p></div><div><span>03</span><p>Celebrar tus logros y recordarte lo capaz que eres.</p></div><div><span>04</span><p>Respetar tu espacio, tus sueños y tu manera de ser.</p></div><div><span>05</span><p>Seguir creando recuerdos sencillos que un día nos hagan sonreír.</p></div><div><span>06</span><p>Elegir el cariño y el respeto también en los días complicados.</p></div></div></div></section>
+
+    <section class="section little-things"><div class="section-heading"><p class="eyebrow">NO TODO TIENE QUE SER ENORME</p><h2>También quiero compartir <em>las cositas simples</em></h2></div><div class="little-grid"><div>☕<strong>Pláticas sin prisa</strong><span>De esas que empiezan con cualquier cosa y terminan siendo inolvidables.</span></div><div>🌙<strong>Buenas noches bonitas</strong><span>Desearnos descanso y tranquilidad al terminar el día.</span></div><div>🎧<strong>Canciones compartidas</strong><span>Encontrar melodías que nos hagan pensar en momentos especiales.</span></div><div>🍓<strong>Detalles inesperados</strong><span>Una palabra bonita, una nota o una sorpresa pequeñita.</span></div></div></section>
+
+    <section class="section surprise-section" id="sorpresas"><div class="section-heading"><p class="eyebrow">TODAVÍA HAY MÁS</p><h2>Una cajita de <em>pequeñas sorpresas</em> 🎁</h2><p>Elige una y descubre un mensajito que preparé para ti.</p></div><div class="surprise-boxes"><button class="surprise-box" data-surprise="0"><span>🎀</span><strong>Un recordatorio</strong><small>Ábreme</small></button><button class="surprise-box" data-surprise="1"><span>🌟</span><strong>Un deseo</strong><small>Ábreme</small></button><button class="surprise-box" data-surprise="2"><span>💝</span><strong>Un secretito</strong><small>Ábreme</small></button></div><div class="surprise-result" id="surpriseResult" aria-live="polite"><span>♡</span><p>Tu mensajito aparecerá aquí.</p></div></section>
+
+    <section class="final-note"><div class="final-note-inner"><span class="final-flower">🌷</span><p class="eyebrow">ANTES DE QUE TE VAYAS...</p><h2>Gracias por existir<br><em>y por ser tú.</em></h2><p>No sé cuántas veces podría escribirte que eres especial sin repetirlo, pero sí sé que nunca me cansaría de recordártelo. Ojalá vuelvas a este rinconcito cuando quieras leer algo bonito.</p><div class="final-signature">Con muchísimo cariño, para mi Ferchis. ♡</div><div class="final-hearts">♡ &nbsp; ♥ &nbsp; ♡ &nbsp; ♥ &nbsp; ♡</div></div></section>
+  </main>
+
+  <footer class="footer"><p>Hecho con cariño, flores imaginarias y muchos corazoncitos.</p><span>Para mi niña hermosa · 07.09.2026</span></footer>
+
+  <!-- Ventana donde se muestran las cartas -->
+  <div class="modal" id="letterModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-backdrop" data-close-modal></div><article class="modal-paper"><button class="modal-close" id="closeModal" aria-label="Cerrar carta">×</button><div class="paper-decoration">✿　♡　✿</div><p class="eyebrow">UNA CARTITA PARA TI</p><h2 id="modalTitle">Para mi niña hermosa</h2><div class="letter-body" id="modalBody"></div><p class="letter-signature">Con todo mi cariño,<br>alguien que te quiere muchísimo. ♡</p></article></div>
+</body>
+</html>
